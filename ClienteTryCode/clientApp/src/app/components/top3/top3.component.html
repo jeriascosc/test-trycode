@@ -1,0 +1,21 @@
+<div class="container" >
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre Planeta</th>
+            <th scope="col">Top vistas</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let list of listtop3">
+            <th scope="row">{{ list.idPlaneta }}</th>
+            <td> {{ list.nombrePlaneta }}</td>
+            <td> {{ list.countViewsPlaneta }}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <h2>Agregar Planetas</h2>
+            <form action="">
+                <div class="form-group">
+                    <input type="text" name="nombrePlaneta" [(ngModel)] = "planeta.nombrePlaneta" placeholder="Nombre Planeta" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="periodoRotacionPlaneta" [(ngModel)] = "planeta.periodoRotacionPlaneta" placeholder="Periodo Rotacion" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="diametroPlaneta" [(ngModel)] = "planeta.diametroPlaneta" placeholder="Diametro" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="climaPlaneta" [(ngModel)] = "planeta.climaPlaneta" placeholder="Clima" class="form-control">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="terrenoPlaneta" [(ngModel)] = "planeta.terrenoPlaneta" placeholder="Terreno"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" hidden name="countViewsPlaneta" [(ngModel)] = "planeta.countViewsPlaneta" value="0" >
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success btn-block" value="Guardar" (click) = "saveNewPlaneta()" >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

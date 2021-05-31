@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="col-md-4-offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <label for="formGroupExampleInput" class="form-label">{{ persona.nombrePersona }} {{
+                    persona.apellidoPersona }} </label>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Edad:</label>
+                    <input type="text" class="form-control" value="{{ persona.edadPersona }}" [disabled]="true">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Altura:</label>
+                    <input type="text" class="form-control" value="{{ persona.alturaPersona }}" [disabled]="true">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Peso:</label>
+                    <input type="text" class="form-control" value="{{ persona.pesoPersona }}" [disabled]="true">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Genero:</label>
+                    <input type="text" class="form-control" value="{{ persona.generoPersona }}" [disabled]="true">
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupExampleInput" class="form-label">Fecha de Nacimiento:</label>
+                    <input type="text" class="form-control" value="{{ persona.fechaNacimientoPersona }}"
+                        [disabled]="true">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container" >
+    <h2> Planetas </h2>
+    <div>
+      <a routerLink="/planeta/save" class="btn btn-dark btn-block"> Agregar Planeta </a>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre Planeta</th>
+            <th scope="col">No. Personas</th>
+            <th scope="col">Visitas</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let planeta of planetas">
+            <th scope="row">{{ planeta[1] }}</th>
+            <td> {{ planeta[2] }}</td>
+            <td> {{ planeta[0] }}</td>
+            <td> {{ planeta[3] }}</td>
+            <td> <a routerLink="/planetas/detail/{{ planeta[1] }}" class="btn btn-info btn-sm" >Ver detalle</a>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+</div>
