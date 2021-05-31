@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Planeta } from '../model/Planeta';
 import { PlanetasService } from '../../services/planetas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-planeta-form',
@@ -17,16 +18,21 @@ export class PlanetaFormComponent implements OnInit {
     terrenoPlaneta: '',
     countViewsPlaneta: 0,
   };
-  constructor( private planetasService: PlanetasService  ) { }
+  constructor( private planetasService: PlanetasService, private router: Router  ) { }
 
   ngOnInit(): void {
-    this.saveNewPlaneta( );
+   
   }
 
   saveNewPlaneta( ){
     this.planetasService.savePlaneta( this.planeta ).subscribe( 
-      err => console.error( err ) 
+      err => { 
+        if( !err ){
+            this.router.navigate(['/planetas']);
+        }
+      }
     );
   }
+
 
 }

@@ -42,5 +42,13 @@ export class PlanetasService {
   getListTop3Planetas( ){
     return this.http.get( `${this.URI_RESTAPI_PLANETA}/top3` );
   }
+  /*
+	Metodo service para obtener un lista de tipo planeta que contine todos los registros de la tabla planeta 
+	@Autor: Edwin Riascos
+	@Fecha: 29-05-2021
+	*/
+  getPlanetas( ){
+    return this.http.get( `${this.URI_RESTAPI_PLANETA}/showplanetas` );
+  }
 
 }

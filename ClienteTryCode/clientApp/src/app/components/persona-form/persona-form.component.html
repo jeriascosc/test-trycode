@@ -1,43 +1,49 @@
-<div class="col-md-4-offset-md-2">
+<div class="col-md-6 offset-md-3">
     <div class="card">
         <div class="card-body">
             <h2>Agregar persona</h2>
             <form action="">
                 <div class="form-group">
-                    <input type="text" name="nombrePersona" placeholder="Nombre" class="form-control">
+                    <input type="text" name="nombrePersona" [(ngModel)] = "persona.nombrePersona" placeholder="Nombre" class="form-control">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="apellidoPersona" placeholder="Apellido" class="form-control">
+                    <input type="text" name="apellidoPersona" [(ngModel)] = "persona.apellidoPersona" placeholder="Apellido" class="form-control">
                 </div>
                 <div class="form-group">
-                    <input type="number" name="edadPersona" placeholder="Edad" class="form-control">
+                    <label for="formGroupExampleInput" class="form-label">Edad</label>
+                    <input type="number" name="edadPersona" [(ngModel)] = "persona.edadPersona" placeholder="Edad" class="form-control">
                 </div>
                 <div class="form-group">
-                    <input type="number" name="pesoPersona" placeholder="Peso" class="form-control">
+                    <label for="formGroupExampleInput" class="form-label">Peso</label>
+                    <input type="number" name="pesoPersona" [(ngModel)] = "persona.pesoPersona"  placeholder="Peso" class="form-control"  >
                 </div>
                 <div class="form-group">
-                    <select class="custom-select" name="generoPersona">
+                    <label for="formGroupExampleInput" class="form-label">Genero</label>
+                    <select class="custom-select" name="generoPersona" [(ngModel)] = "persona.generoPersona">
                         <option selected>Genero</option>
-                        <option value="1">M</option>
-                        <option value="2">F</option>
-                        <option value="3">Otro</option>
-                      </select>
+                        <option value="M">M</option>
+                        <option value="F">F</option>
+                        <option value="O">Otro</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <input type="number" name="fechaNacimientoPersona" placeholder="Fecha Nacimiento" class="form-control">
+                    <input matInput [matDatepicker]="picker" name="fechaNacimientoPersona" [(ngModel)] = "persona.fechaNacimientoPersona" placeholder="Fecha Nacimiento"  class="form-control" >
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
                 </div>
                 <div class="form-group">
-                    <input type="text" hidden name="countViewsPersona">
+                    <input type="text" hidden name="countViewsPersona" [(ngModel)] = "persona.countViewsPersona" value="0">
                 </div>
-                <div class="form-group">
-                    <select class="custom-select" name="generoPersona">
+                <div class="form-group"  >
+                    <label for="formGroupExampleInput" class="form-label">Escoger planeta</label>
+                    <select class="custom-select" name="generoPersona" [(ngModel)]="persona.idPlaneta" ng-required="true" >
                         <option selected>Seleccionar Planeta</option>
-                        <option value="1">M</option>
-                        <option value="2">F</option>
-                        <option value="3">Otro</option>
-                      </select>
+                        <option *ngFor="let listp of listPlanetas" [ngValue]="listp.idPlaneta"> {{ listp.nombrePlaneta }} </option>
+                    </select>
                 </div>
-
+                <div class="form-group">
+                    <input type="submit" name="bntGuadar" class="btn btn-success btn-block" value="Guardar" (click) = "saveNewPersona( )" >
+                </div>
             </form>
         </div>
     </div>

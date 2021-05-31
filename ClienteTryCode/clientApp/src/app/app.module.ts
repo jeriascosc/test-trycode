@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule,  } from '@angular/material/datepicker';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonaDetailsComponent } from './components/persona-details/persona-details.component';
 import { PlanetaDetailsComponent } from './components/planeta-details/planeta-details.component';
 import { Top3Component } from './components/top3/top3.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -34,7 +38,10 @@ import { Top3Component } from './components/top3/top3.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
     PersonasService,

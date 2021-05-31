@@ -96,5 +96,14 @@ public class PlanetaRestApi {
    public List<Planeta> getListTop3Planeta( ){
 	   return this.ctrlPlanetaDao.getListTop3Planetas( );
    }
+   /*
+	Función para obtener una lista de el objeto tipo planeta por medio del metodo HTTP get
+	@Autor: Edwin Riascos
+	@Fecha: 27-05-2021
+	*/
+	@GetMapping("/showplanetas")
+	public List<Planeta> getPlanetas( ){
+		return ctrlPlanetaDao.findAll();
+	}
 	
 }
