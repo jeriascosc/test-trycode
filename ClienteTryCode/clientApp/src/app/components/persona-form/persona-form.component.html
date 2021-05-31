@@ -36,7 +36,7 @@
                 </div>
                 <div class="form-group"  >
                     <label for="formGroupExampleInput" class="form-label">Escoger planeta</label>
-                    <select class="custom-select" name="generoPersona" [(ngModel)]="persona.idPlaneta" ng-required="true" >
+                    <select  class="custom-select" name="generoPersona" [(ngModel)]="persona.idPlaneta">
                         <option selected>Seleccionar Planeta</option>
                         <option *ngFor="let listp of listPlanetas" [ngValue]="listp.idPlaneta"> {{ listp.nombrePlaneta }} </option>
                     </select>

@@ -9,8 +9,10 @@ export class PersonasService {
 
   constructor( private http: HttpClient ) { 
 
-  }
-   URI_RESTAPI_PERSONA = 'http://127.0.0.1:8080/v1/persona'; 
+  }  
+  // URL PRODUCCION : http://trycorerestapitest-env.eba-aksgmn7f.us-east-2.elasticbeanstalk.com/v1/persona
+  // URL DEV : http://127.0.0.1:8080/v1/persona
+   URI_RESTAPI_PERSONA = 'http://trycorerestapitest-env.eba-aksgmn7f.us-east-2.elasticbeanstalk.com/v1/persona'; 
   /*
 	Metodo service para obtener informacion basica de los registros de la tabla personas
 	@Autor: Edwin Riascos

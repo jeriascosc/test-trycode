@@ -8,8 +8,9 @@ import { Planeta } from '../components/model/Planeta';
 export class PlanetasService {
 
   constructor( private http: HttpClient ) { }
-
-  URI_RESTAPI_PLANETA = 'http://127.0.0.1:8080/v1/planeta'; 
+   // URL PRODUCCION : http://trycorerestapitest-env.eba-aksgmn7f.us-east-2.elasticbeanstalk.com/v1/planeta
+  // URL DEV : http://127.0.0.1:8080/v1/planeta
+  URI_RESTAPI_PLANETA = 'http://trycorerestapitest-env.eba-aksgmn7f.us-east-2.elasticbeanstalk.com/v1/planeta'; 
   /*
 	Metodo service para obtener informacion basica de los registros de la tabla planetas
 	@Autor: Edwin Riascos
