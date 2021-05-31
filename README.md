@@ -78,3 +78,23 @@ Documentación Swagger URL: : http://trycorerestapitest-env.eba-aksgmn7f.us-east
 
 CONFIGURACIÓN DE ESCENARIOS DE PRODUCCIÓN.
 
+<<<<<<< Updated upstream
+=======
+El proyecto se desplegará en dos servicios de Aws. La aplicación cliente web se alojará en S3 y la aplicación restfull en Elasticbeanstalk.
+Antes de realizar la publicación de cada una de las aplicaciones antes mencionadas, se debe realizar la configuración y generación del archivo jar de la aplicación rest api como primera medida.
+Se implementa primero la aplicación restfull porque ésta provee la URI raíz de producción que luego se implementará en la aplicación cliente SPA de angular. Seguido se debe realizar la creación y configuración de la aplicación Elasticbeanstalk de aws. Finalmente se carga el archivo jar y se obtiene la URI raíz. 
+A continuación, se muestra en las imágenes el proceso de creación y configuración de la aplicación Elasticbeanstalk.
+
+Configuración de Angular.
+
+Para configura el proyecto cliente web en angular como primera medida, se procede a cambiar la ruta raiz de la aplicación rest api appserver de desarrollo a la ruta de producción, estos archivos están ublicados en la carpeta service.
+
+Luego se debe generar los archivos de producción de angular con el comando ng build --prod. Estos archivos se alojarán dentro de la carpeta del proyecto de angular con el nombre de dist. En este directorio se encontrará una carpeta con el nombre del proyecto, el cual contiene los archivos que posteriormente se cargarán al bucket de amazon s3.
+Una vez se culmine el proceso de generación del proyecto angular a producción, se procederá a crear una bucket para el alojamiento de aplicaciones web estáticas.
+Cunado se de por terminada la creación y configuración del bucket de amazon s3, se cargan los archivos de producción de angular. Este backet provee una url de acceso, la cual se copia y se pega en el navegador para comprobar el funcionamiento de la aplicación.
+Este proceso se evidencia en las siguientes imágenes. 
+
+
+
+>>>>>>> Stashed changes
+.

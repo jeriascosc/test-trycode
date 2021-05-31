@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.appserver.AppserverApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.449 s - in com.appserver.AppserverApplicationTests
